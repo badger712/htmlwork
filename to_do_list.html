@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+
+    <input id="input" placeholder="" type="text"><br><br>
+    <button id="send" >submit</button>
+
+    <p id="result" ></p>
+
+    <script>
+        let n_input;
+        let n_send;
+        let n_result;
+
+
+        let list = [];
+
+
+        n_input = document.getElementById("input");
+        n_send = document.getElementById("send");
+        n_result = document.getElementById("result");
+
+
+        n_send.onclick = function(){
+            list.push(n_input.value)
+            n_result.innerHTML = list.join("<br>");
+        }
+
+
+    </script>
+</body>
+</html>
